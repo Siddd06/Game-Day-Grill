@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="">
+  <script src="static/js/cart.js"></script>
+  <title> Game Day Grill </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="static/images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Game Day Grill
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="menu.html">Order <span class="sr-only">(current)</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html">Book Table</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+  </div>
+</div>
+    </header>
+    <script>
+    function liveSearch() {
+      // Locate the card elements
+      let cards = document.querySelectorAll('.filters-content')
+      console.log(cards)
+      // Locate the search input
+      let search_query = document.getElementById("searchbox").value;
+      // Loop through the cards
+      for (var i = 0; i < cards.length; i++) {
+        // If the text is within the card...
+        console.log(cards[i].innerText.toLowerCase()
+          // ...and the text matches the search query...
+          .includes(search_query.toLowerCase()))
+        if(cards[i].innerText.toLowerCase()
+          // ...and the text matches the search query...
+          .includes(search_query.toLowerCase())) {
+            // ...remove the `.is-hidden` class.
+            cards[i].classList.remove("is-hidden");
+        } else {
+          // Otherwise, add the class.
+          cards[i].classList.add("is-hidden");
+        }
+      }
+    }
+    </script>
+
+    <!-- Styling -->
+    <style>
+      .is-hidden { display: none; }
+    </style>
+    
+  <style>
+    body{
+      background: #f2f2f2;
+
+    }
+
+    .search{
+      width: 100%;
+      position: relative;
+      display: flex;
+    }
+
+    .searchTerm{
+      width: 100%;
+      border: 3px solid #fac931;
+      border-right: none;
+      padding: 5px;
+      height: 36px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      color: #404040;
+    }
+
+    .searchTerm:focus{
+      color: #404040;
+    }
+
+    .searchButton{
+      width: 40px;
+      height: 36px;
+      border: 1px solid #fac931;
+      background: #fac931;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change*/
+    .wrap{
+      width: 30%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    </style>
+  
+    <!-- end header section -->
+
+  <a href="#category" class="up-icon"><i class="fa-solid fa-circle-chevron-up"></i></a>
+
+  <!--Product Cards-->
+  <section id="food_section layout_padding product-cards">
+    <div class="container container-fluid">
+      <div class="heading_container heading_center">
+        <h2 style="color: #f2f2f2">GDAY Grill</h2>
+        <h2>
+          Our Menu
+        </h2>
+        <h2 style="color: #f2f2f2">GDAY Grill</h2>
+      </div>
+      
+      <div class="wrap">
+        <!-- Div for  displaying search bar -->
+      <div class="search">
+      <input type="text" class="searchTerm" id="searchbox" oninput="liveSearch()" placeholder="Search">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+      </div>
+      </div>
+      
+      <div class="filters-content row row-cols-2 row-cols-md-4 g-4">
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all pizza ">
+          <div class="card h-100">
+            <img src="static/images/f1.png" class="card-img-top i shop-item-image" alt="...">
+            <div class="card-body detail-box">
+              <h5 class="card-title shop-item-title">Buffalo Chicken Pizza</h5>
+              <p>Savor the perfect fusion of zesty heat and savory delight with our Buffalo Chicken Pizza, where tender chicken meets tangy buffalo sauce atop a bed of melted cheese and crispy crust.</p>
+              <p class="card-text shop-item-price">$ 20.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all burger">
+          <div class="card h-100">
+            <img src="static/images/f2.png" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title shop-item-title">Big Beefy Burger</h5>
+              <p>Indulge in the ultimate carnivore's delight with our Big Beefy Burger – a mouthwatering masterpiece featuring a juicy, flame-grilled patty, fresh toppings, and a toasted bun for a satisfying burst of flavor in every bite.</p>
+              <p class="card-text shop-item-price">$ 15.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all pizza">
+          <div class="card h-100">
+            <img src="static/images/f3.png" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Margherita Pizza </h5>
+              <p>Experience pizza perfection with our Margherita Pizza, where simplicity meets sublime taste - a harmony of fresh mozzarella, ripe tomatoes, aromatic basil, and a drizzle of olive oil on a thin, crispy crust.</p>
+              <p class="card-text shop-item-price">$ 17.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all wings">
+          <div class="card h-100">
+            <img src="static/images/f4.jpg" alt="..." class="card-img-top shop-item-image">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Hot Habanero Wings</h5>
+              <p>Ignite your taste buds with our Hot Habanero Wings, a fiery fusion of crispy, succulent chicken wings drenched in a bold habanero-infused sauce, delivering a spicy kick that will keep you craving more.</p>
+              <p class="card-text shop-item-price">$ 18.00</p>
+               <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all fries">
+          <div class="card h-100">
+            <img src="static/images/f5.png" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">French Fries</h5>
+              <p>
+                Delight in golden perfection with our French Fries, where each crispy bite unveils a fluffy interior, expertly seasoned to elevate the classic potato to a savory sensation that's impossible to resist.
+              </p>
+              <p class="card-text shop-item-price">$ 10.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all pizza">
+          <div class="card h-100">
+            <img src="static/images/f6.png" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Combo Pizza</h5>
+              <p>Experience the best of both worlds with our Combo Pizza – a flavorful symphony featuring a medley of savory meats, fresh vegetables, and gooey melted cheese, all atop our signature crust for the perfect balance of taste and satisfaction.</p>
+              <p class="card-text shop-item-price">$ 15.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all burger">
+          <div class="card h-100">
+            <img src="static/images/f7.png" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Chicken Sandwich</h5>
+              <p>
+                Satisfy your cravings with our Chicken Sandwich – a delicious ensemble of tender, seasoned chicken, fresh lettuce, ripe tomatoes, and zesty mayo, all nestled between soft brioche buns for a mouthwatering handheld delight.
+              </p>
+              <p class="card-text shop-item-price">$ 12.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all burger">
+          <div class="card h-100">
+            <img src="static/images/f8.png" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Fish Fillet Sandwich</h5>
+              <p>Dive into delectable flavors with our Fish Fillet Sandwich – a crispy and succulent fillet of fish, adorned with fresh lettuce, tangy tartar sauce, all embraced by a soft bun, creating a maritime symphony that's as satisfying as it is delicious.</p>
+              <p class="card-text shop-item-price">$ 14.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters-content col filter-item all new col-sm-6 col-lg-4 all wings">
+          <div class="card h-100">
+            <img src="static/images/f9.jpg" class="card-img-top shop-item-image" alt="...">
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Cauliflower Wings</h5>
+              <p>
+                Delight in guilt-free indulgence with our Cauliflower Wings – a crispy, golden-brown exterior gives way to tender cauliflower florets coated in flavorful sauces, providing a satisfyingly savory experience that will make you rethink traditional wing options.
+              </p>
+              <p class="card-text shop-item-price">$ 18.00</p>
+              <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Shopping Cart-->
+  <section class="container content-section" id="shopping-cart">
+
+    <h1 style="text-align: center; margin-bottom: 7%; margin-top: 7%">Shopping Cart</h1>
+
+   <table class="table table-hover table-cart">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody class="cart-items">
+
+
+    </tbody>
+  </table>
+
+      <div class="cart-total"> 
+        <strong class="cart-total-title" style="font-size:25px; ">Total: </strong>
+        <span  class="cart-total-price" style="text-align: right; font-size:25px; ">$0</span>
+      </div>
+
+
+      <div class="btn-purchase" style="margin-top: 7%; margin-bottom: 10%;">
+        <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping"></i>PURCHASE</button>
+      </div>
+
+  </section>
+
+  <!-- end food section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contact Us
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Plymouth, MN
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +1 (123) 456-7890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  gamedaygrill@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Game Day Grill
+            </a>
+            <p>
+              America's Favorite Grill
+            </p>
+            <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Opening Hours
+          </h4>
+          <p>
+            Sunday - Saturday
+          </p>
+          <p>
+            9:00 AM - 11:00 PM
+          </p>
+        </div>
+      </div>      
+      <div class="footer-info">
+        <p>
+          Game Day Grill &copy; <span id="displayYear"></span>
+          <a href=""></a><br><br>
+          <span id="displayYear"></span>
+          <a href="" target="_blank"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="static/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

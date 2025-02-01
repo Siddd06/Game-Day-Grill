@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="">
+
+  <title> Game Day Grill </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="static/images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Game Day Grill
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="book.html">Book Table <span class="sr-only">(current)</span> </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- book section -->
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            
+            <form action="">
+              <div>
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+              <div>
+                <input type="email" class="form-control" placeholder="Your Email">
+              </div>
+              <div>
+                  <input type="number" class="form-control" placeholder="Number of People">
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Date">
+              </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"></label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option selected>Select Time</option>
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+              <option>9:00 PM</option>
+              <option>10:00 PM</option>
+            </select>
+          </div>
+              <div id="my_form">
+                <button id="nextStep">Book Now!</button>
+              </div>
+
+              <div id="thank_you" style="display: none;">
+                <p>Thank you for booking a table!</p>
+                <button type="submit">Close</button>
+              </div>
+
+              <script>
+                var nextStep = document.querySelector('#nextStep');
+                nextStep.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  document.getElementById('my_form').style.display = 'none';
+                  document.getElementById('thank_you').style.display = 'block';
+                });
+              </script>
+           </form>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            
+              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%Wayzata+High+School,+Brazil&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contact Us
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Plymouth, MN
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +1 (123) 456-7890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  gamedaygrill@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Game Day Grill
+            </a>
+            <p>
+              America's Favorite Grill
+            </p>
+            <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Opening Hours
+          </h4>
+          <p>
+            Sunday - Saturday
+          </p>
+          <p>
+            9:00 AM - 11:00 PM
+          </p>
+        </div>
+      </div>      
+      <div class="footer-info">
+        <p>
+          Game Day Grill &copy; <span id="displayYear"></span>
+          <a href=""></a><br><br>
+          <span id="displayYear"></span>
+          <a href="" target="_blank"></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="static/js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
